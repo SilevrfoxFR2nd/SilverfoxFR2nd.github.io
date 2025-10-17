@@ -1,3 +1,6 @@
+const overlay = document.getElementById("overlay");
+const overlayContent = document.getElementById("overlayContent");
+
 export async function loadPacks() {
   console.log("Hello from packLoader.js! loadPacks function is called !!");
 
@@ -66,6 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Call loadPacks once when DOM is ready
   loadPacks();
 });
+
 
 
 
