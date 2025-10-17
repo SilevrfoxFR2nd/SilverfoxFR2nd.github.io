@@ -43,7 +43,15 @@ export async function loadPacks() {
 async function startPack(folder) {
   console.log(`Hi ! The pack ID "${folder}" is now being loaded !`);
   document.getElementById("runtime").innerHTML = "";
-  const newPage = await import(`../../packs/${folder}/index.html`);
+  const newPage = await fetch(`../../packs/${folder}/index.html`);
+  const html = await newPage.text();
+    overlayContent.innerHTML = html;
+    overlay.style.display = "flex";
+  const closeBtn = overlayContent.querySelector("#closeOverlay");
+    if (closeBtn) closeBtn.addEventListener("click", () => {
+        overlay.style.display = "none";
+        overlayContent.innerHTML = ""; // clear content for next time
+    });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -58,5 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Call loadPacks once when DOM is ready
   loadPacks();
 });
+
 
 
