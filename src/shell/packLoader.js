@@ -44,7 +44,7 @@ async function startPack(folder) {
   console.log(`Hi ! The pack ID "${folder}" is now being loaded !`);
   document.getElementById("runtime").innerHTML = "";
   const newPage = await import(`../../packs/${folder}/entry.html`);
-
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   const reloadBtn = document.getElementById("reloadPacks");
@@ -58,3 +58,4 @@ document.addEventListener("DOMContentLoaded", () => {
   // Call loadPacks once when DOM is ready
   loadPacks();
 });
+
