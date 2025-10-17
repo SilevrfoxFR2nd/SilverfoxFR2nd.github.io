@@ -1,3 +1,11 @@
 [
-  { "name": "Throwaway Test", "folder": "Testing" }
+  { "name": "Introduction", "folder": "Intro" },
+  { "name": "Identification d'un Besoin", "folder": "P1" },
+  { "name": "Analyse du Problème", "folder": "P2" },
+  { "name": "L'étude de principes", "folder": "P3" },
+  { "name": "L'étude de construction", "folder": "P4" },
+  { "name": "Le prototypage", "folder": "P5" },
+  { "name": "Validation du concept", "folder": "P6" },
+  { "name": "L'élaboration des dessins techniques finaux", "folder": "P7" },
+  { "name": "Pour finir..", "folder": "P8" },
 ]
