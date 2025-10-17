@@ -43,7 +43,7 @@ export async function loadPacks() {
 async function startPack(folder) {
   console.log(`Hi ! The pack ID "${folder}" is now being loaded !`);
   document.getElementById("runtime").innerHTML = "";
-  const newPage = await import(`../../packs/${folder}/entry.html`);
+  const newPage = await import(`../../packs/${folder}/index.html`);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -58,4 +58,5 @@ document.addEventListener("DOMContentLoaded", () => {
   // Call loadPacks once when DOM is ready
   loadPacks();
 });
+
 
